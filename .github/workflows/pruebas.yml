@@ -1,0 +1,14 @@
+name: Pruebas de mi pagina web
+
+on: [push]
+
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar codigo
+        uses: actions/checkout@v4
+
+      - name: Ejecutar pruebas
+        run: sh test.sh
